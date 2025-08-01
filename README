@@ -1,0 +1,97 @@
+# Mentema
+
+**Mentema** es una **Agencia Creativa Integral para Marcas con Visión**. Este proyecto representa la presencia online de la marca, con un diseño moderno, accesible, responsivo y centrado en transmitir el valor de la creatividad estratégica. La plataforma está construida con tecnologías web actuales, optimizadas para rendimiento y mantenibilidad.
+
+## 🌱 Objetivo de la marca
+
+Mentema nace con el propósito de acompañar a marcas ambiciosas en su transformación, ayudándolas a conectar con su audiencia a través del diseño, la estrategia y la innovación. Nuestra visión se basa en el poder de la creatividad para generar impacto real y duradero.
+
+---
+
+## 🚀 Tecnologías utilizadas
+
+- [Vite](https://vitejs.dev/) — Bundler ultrarrápido.
+- [Tailwind CSS](https://tailwindcss.com/) — Framework de estilos utilitarios.
+- Vanilla JavaScript — Sin frameworks, para un mayor control.
+- HTML modularizado mediante componentes reutilizables.
+
+---
+
+## 📁 Estructura del proyecto
+
+```bash
+src/
+├── components/         # Componentes HTML reutilizables
+├── views/              # Páginas completas
+├── router.js           # Lógica de enrutamiento SPA
+├── main.js             # Punto de entrada JavaScript
+└── style.css           # Estilos globales
+```
+
+---
+
+## 🛠️ Instalación y ejecución local
+
+1. Clona este repositorio:
+
+   ```bash
+   git clone https://github.com/tuusuario/mentema.git
+   ```
+
+2. Accede a la carpeta del proyecto:
+
+   ```bash
+   cd mentema
+   ```
+
+3. Instala las dependencias:
+
+   ```bash
+   npm install
+   ```
+
+4. Inicia el servidor de desarrollo:
+
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## 🤝 Contribuciones
+
+¡Las contribuciones son bienvenidas! Si deseas colaborar con el proyecto:
+
+1. Haz un fork del repositorio.
+2. Crea una rama con tu funcionalidad: `git checkout -b feature/mi-mejora`
+3. Realiza tus cambios y haz commit: `git commit -m 'Mejora: nueva funcionalidad'`
+4. Haz push a tu rama: `git push origin feature/mi-mejora`
+5. Abre un Pull Request.
+
+---
+
+## 🔒 Licencia
+
+Este proyecto está licenciado bajo la [Licencia MIT](LICENSE).
+
+---
+
+## 👤 Créditos
+
+Proyecto desarrollado por **oslar**.
+
+---
+
+## 📌 Estado actual
+
+- ✅ SPA funcional con rutas gestionadas por JavaScript.
+- ✅ Diseño responsivo y estructura modular.
+- ✅ Páginas principales: Home, About, Services, Contact.
+- ⏳ Formularios no funcionales por el momento.
+- ❌ Sin backend asociado actualmente.
+
+---
+
+## 🌐 Público
+
+Este repositorio es público y sirve como base para la plataforma web de Mentema, alineada con los valores de creatividad, estrategia y visión de marca.

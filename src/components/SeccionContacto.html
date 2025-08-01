@@ -1,0 +1,57 @@
+<section id="seccion-contacto"
+    class="bg-[#f5f0e6] border border-4 border-black rounded-xl mx-4 md:mx-auto my-16 max-w-6xl px-4 py-12 overflow-hidden">
+
+    <!-- BLOQUE 1: Logos en negro con gradiente arriba -->
+    <div class="-mx-4 bg-black  -mt-12 pt-1 pb-6 mb-10 relative overflow-hidden">
+        <!-- Gradiente superior -->
+        <div class="absolute top-0 left-0 w-full h-4 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-500"></div>
+
+        <!-- Logos (puedes usar imágenes reales o SVGs según lo necesites) -->
+        <div class="flex flex-wrap justify-center items-center gap-8 mt-6">
+            <img src="/public/logos/tiktok-banner-black-3-logo-svgrepo-com.svg" alt="TikTok" class="h-14" />
+            <img src="/public/logos/spotify-1-logo-svgrepo-com.svg" alt="Spotify" class="h-14" />
+            <img src="/public/logos/airbnb-2-logo-svgrepo-com.svg" alt="Airbnb" class="h-14" />
+            <img src="/public/logos/netflix-2-logo-svgrepo-com.svg" alt="Netflix" class="h-14" />
+        </div>
+    </div>
+
+    <!-- BLOQUE 2: Texto + Formulario -->
+    <div class="grid md:grid-cols-2 gap-10 items-start">
+
+        <!-- Texto lateral -->
+        <div>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-4">¿Hablamos de tu proyecto?
+            </h2>
+            <p class="text-gray-700 text-base md:text-lg leading-relaxed mb-2">
+                Queremos conocer tu visión y ayudarte a hacerla realidad. Rellena el formulario y nos pondremos en
+                contacto contigo en menos de 24h.
+            </p>
+            <p class="italic text-sm text-gray-600">¡Mentema está aquí para impulsar tu marca!</p>
+        </div>
+
+        <!-- Formulario -->
+        <form class="border border-black rounded-xl bg-white p-6 space-y-6 w-full shadow-md">
+            <div>
+                <label for="name" class="block text-xs font-bold uppercase mb-1">Name</label>
+                <input type="text" id="name" name="name" required
+                    class="w-full border-b-2 border-black bg-transparent outline-none focus:ring-0" />
+            </div>
+            <div>
+                <label for="email" class="block text-xs font-bold uppercase mb-1">Email Address</label>
+                <input type="email" id="email" name="email" required
+                    class="w-full border-b-2 border-black bg-transparent outline-none focus:ring-0" />
+            </div>
+            <div>
+                <label for="message" class="block text-xs font-bold uppercase mb-1">Message</label>
+                <textarea id="message" name="message" rows="3" required
+                    class="w-full border-b-2 border-black bg-transparent outline-none focus:ring-0 resize-none"></textarea>
+            </div>
+            <div class="text-right">
+                <button type="submit"
+                    class="bg-[#f5f0e6] px-6 py-2 rounded-md border border-black font-semibold shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:translate-x-[1px] hover:translate-y-[1px] transition duration-200">
+                    SUBMIT
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
