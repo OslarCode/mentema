@@ -1,51 +1,172 @@
-<section id="seccion-contacto"
-    class="bg-[#f5f0e6] border border-4 border-black rounded-xl mx-4 md:mx-auto my-16 max-w-6xl px-4 py-12 overflow-hidden">
+<section id="seccion-contacto" class="relative bg-[#fef7ed] py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div class="absolute top-0 left-0 w-40 h-40 bg-blue-400/5 rounded-full blur-2xl"></div>
+    <div class="absolute bottom-0 right-0 w-32 h-32 bg-green-400/5 rounded-full blur-2xl"></div>
+    <div class="absolute top-1/3 right-1/4 w-24 h-24 bg-purple-400/5 rounded-full blur-2xl"></div>
 
-    <div class="-mx-4 bg-black  -mt-12 pt-1 pb-6 mb-10 relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-4 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-500"></div>
+    <div class="relative max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <!-- Badge -->
+            <div
+                class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 border border-blue-200 shadow-sm mb-8">
+                <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+                <span class="text-sm font-medium text-gray-700">Hablemos de tu Proyecto</span>
+            </div>
 
-        <div class="flex flex-wrap justify-center items-center gap-8 mt-6">
-            <img src="/logos/tiktok-banner-black-3-logo-svgrepo-com.svg" alt="TikTok" class="h-14" />
-            <img src="/logos/spotify-1-logo-svgrepo-com.svg" alt="Spotify" class="h-14" />
-            <img src="/logos/airbnb-2-logo-svgrepo-com.svg" alt="Airbnb" class="h-14" />
-            <img src="/logos/netflix-2-logo-svgrepo-com.svg" alt="Netflix" class="h-14" />
-        </div>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-10 items-start">
-
-        <div>
-            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-4">¿Hablamos de tu proyecto?
+            <h2 class="heading-1 text-gray-900 mb-6">
+                ¿Listo para
+                <span class="block title-gradient animate-gradient-shift">transformar tu marca?</span>
             </h2>
-            <p class="text-gray-700 text-base md:text-lg leading-relaxed mb-2">
-                Queremos conocer tu visión y ayudarte a hacerla realidad. Rellena el formulario y nos pondremos en
-                contacto contigo en menos de 24h.
+
+            <p class="body-large text-gray-600 max-w-2xl mx-auto text-hover-glow">
+                Hablemos sobre tu proyecto y descubramos juntos cómo podemos llevar tu marca al siguiente nivel.
             </p>
-            <p class="italic text-sm text-gray-600">¡Mentema está aquí para impulsar tu marca!</p>
         </div>
 
-        <form class="border border-black rounded-xl bg-white p-6 space-y-6 w-full shadow-md">
-            <div>
-                <label for="name" class="block text-xs font-bold uppercase mb-1">Name</label>
-                <input type="text" id="name" name="name" required
-                    class="w-full border-b-2 border-black bg-transparent outline-none focus:ring-0" />
+        <!-- Contenido principal -->
+        <div class="grid lg:grid-cols-2 gap-12 items-start">
+            <!-- Información de contacto -->
+            <div class="space-y-8">
+                <div class="space-y-4">
+                    <h3 class="heading-2 text-gray-900">
+                        Hablemos de tu
+                        <span class="text-hover-gradient">proyecto</span>
+                    </h3>
+
+                    <div class="space-y-4">
+                        <p class="body-base text-gray-600 text-hover-glow">
+                            Queremos conocer tu visión y ayudarte a hacerla realidad. Cuéntanos tu idea y nos pondremos
+                            en contacto contigo en menos de 24 horas.
+                        </p>
+
+                        <p class="body-base text-gray-600 text-hover-glow">
+                            Ya sea que necesites branding, diseño web, marketing o packaging, estamos aquí para
+                            crear soluciones que realmente funcionen.
+                        </p>
+                    </div>
+
+                    <!-- Información de contacto rápida -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div
+                            class="flex items-center gap-3 p-4 bg-white/50 backdrop-blur-sm rounded-xl border border-gray-200">
+                            <div
+                                class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium text-gray-900">Email</p>
+                                <p class="text-xs text-gray-600">info@mentema.com</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex items-center gap-3 p-4 bg-white/50 backdrop-blur-sm rounded-xl border border-gray-200">
+                            <div
+                                class="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium text-gray-900">Teléfono</p>
+                                <p class="text-xs text-gray-600">+34 912 345 678</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mensaje motivacional -->
+                <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6 border border-blue-200">
+                    <p class="text-sm text-gray-700 italic">
+                        "¡Mentema está aquí para impulsar tu marca! Trabajamos contigo para crear soluciones
+                        que no solo se vean bien, sino que generen resultados reales."
+                    </p>
+                </div>
             </div>
-            <div>
-                <label for="email" class="block text-xs font-bold uppercase mb-1">Email Address</label>
-                <input type="email" id="email" name="email" required
-                    class="w-full border-b-2 border-black bg-transparent outline-none focus:ring-0" />
+
+            <!-- Formulario mejorado -->
+            <div class="relative">
+                <div
+                    class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-500">
+                    <form class="space-y-6">
+                        <!-- Campo Nombre -->
+                        <div class="group">
+                            <label for="name"
+                                class="block text-sm font-semibold text-gray-700 mb-3 group-hover:text-gray-900 transition-colors duration-300">
+                                Nombre Completo
+                            </label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-3 bg-transparent border-b-2 border-gray-300 focus:border-blue-500 outline-none transition-all duration-300 placeholder-gray-400 focus:placeholder-gray-300"
+                                placeholder="Tu nombre completo" />
+                        </div>
+
+                        <!-- Campo Email -->
+                        <div class="group">
+                            <label for="email"
+                                class="block text-sm font-semibold text-gray-700 mb-3 group-hover:text-gray-900 transition-colors duration-300">
+                                Correo Electrónico
+                            </label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-3 bg-transparent border-b-2 border-gray-300 focus:border-blue-500 outline-none transition-all duration-300 placeholder-gray-400 focus:placeholder-gray-300"
+                                placeholder="tu@email.com" />
+                        </div>
+
+                        <!-- Campo Mensaje -->
+                        <div class="group">
+                            <label for="message"
+                                class="block text-sm font-semibold text-gray-700 mb-3 group-hover:text-gray-900 transition-colors duration-300">
+                                Mensaje
+                            </label>
+                            <textarea id="message" name="message" rows="4" required
+                                class="w-full px-4 py-3 bg-transparent border-b-2 border-gray-300 focus:border-blue-500 outline-none transition-all duration-300 placeholder-gray-400 focus:placeholder-gray-300 resize-none"
+                                placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                        </div>
+
+                        <!-- Botón de envío -->
+                        <div class="pt-4">
+                            <button type="submit"
+                                class="group relative w-full inline-flex items-center justify-center px-8 py-4 bg-gray-900 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transform hover:translate-y-[-2px] transition-all duration-300 overflow-hidden">
+                                <span class="relative z-10">Enviar Mensaje</span>
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                </div>
+
+                                <!-- Icono -->
+                                <svg class="w-5 h-5 ml-3 relative z-10 transform group-hover:translate-x-1 transition-transform"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Elemento decorativo -->
+                <div class="absolute -top-4 -right-4 w-8 h-8 bg-blue-400/20 rounded-full blur-sm"></div>
+                <div class="absolute -bottom-4 -left-4 w-6 h-6 bg-purple-400/20 rounded-full blur-sm"></div>
             </div>
-            <div>
-                <label for="message" class="block text-xs font-bold uppercase mb-1">Message</label>
-                <textarea id="message" name="message" rows="3" required
-                    class="w-full border-b-2 border-black bg-transparent outline-none focus:ring-0 resize-none"></textarea>
+        </div>
+
+        <!-- Línea informativa inferior -->
+        <div class="mt-16 pt-8 border-t border-gray-200/50">
+            <div class="flex flex-wrap gap-8 justify-center text-center text-sm text-gray-500">
+                <div class="flex items-center gap-2">
+                    <div class="w-1 h-1 bg-blue-500 rounded-full"></div>
+                    <span>Respuesta en 24 horas</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="w-1 h-1 bg-green-500 rounded-full"></div>
+                    <span>Consultoría inicial gratuita</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="w-1 h-1 bg-purple-500 rounded-full"></div>
+                    <span>Presupuesto personalizado</span>
+                </div>
             </div>
-            <div class="text-right">
-                <button type="submit"
-                    class="bg-[#f5f0e6] px-6 py-2 rounded-md border border-black font-semibold shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:translate-x-[1px] hover:translate-y-[1px] transition duration-200">
-                    SUBMIT
-                </button>
-            </div>
-        </form>
+        </div>
     </div>
 </section>
