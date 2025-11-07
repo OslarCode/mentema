@@ -1,0 +1,60 @@
+<!-- src/views/Error404.html -->
+<section class="min-h-screen bg-[#f5f0e6] flex items-center justify-center px-4">
+    <div class="text-center max-w-2xl mx-auto">
+
+        <!-- Número 404 grande -->
+        <div class="mb-8">
+            <h1 class="text-9xl md:text-[12rem] font-black text-gray-900 leading-none">404</h1>
+        </div>
+
+        <!-- Mensaje principal -->
+        <div class="mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                Página no encontrada
+            </h2>
+            <p class="text-gray-600 text-lg max-w-md mx-auto">
+                Lo sentimos, la página que buscas no existe o ha sido movida.
+            </p>
+        </div>
+
+        <!-- Ilustración opcional -->
+        <div class="mb-8 max-w-xs mx-auto">
+            <svg class="w-full h-auto" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="40" y="50" width="120" height="8" rx="4" fill="#E5E7EB" />
+                <rect x="40" y="70" width="80" height="8" rx="4" fill="#E5E7EB" />
+                <rect x="40" y="90" width="100" height="8" rx="4" fill="#E5E7EB" />
+                <circle cx="100" cy="25" r="20" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2" />
+                <circle cx="95" cy="20" r="2" fill="#9CA3AF" />
+                <circle cx="105" cy="20" r="2" fill="#9CA3AF" />
+                <path d="M90 35 Q100 45 110 35" stroke="#9CA3AF" stroke-width="2" fill="none" />
+            </svg>
+        </div>
+
+        <!-- Botones de acción -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="/"
+                class="inline-block px-6 py-3 bg-[#f5f0e6] text-black font-semibold rounded border border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:translate-x-[1px] hover:translate-y-[1px] transition duration-200">
+                Volver al Inicio
+            </a>
+
+            <a href="/contacto"
+                class="inline-block px-6 py-3 bg-black text-white font-semibold rounded border border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:translate-x-[1px] hover:translate-y-[1px] transition duration-200">
+                Contactar Soporte
+            </a>
+        </div>
+
+        <!-- Enlaces adicionales -->
+        <div class="mt-8 pt-6 border-t border-gray-300">
+            <p class="text-gray-500 text-sm mb-3">También puedes visitar:</p>
+            <div class="flex justify-center gap-6 text-sm">
+                <a href="/services" class="text-orange-500 hover:underline">Servicios</a>
+                <a href="/about" class="text-orange-500 hover:underline">Sobre Nosotros</a>
+                <a href="/contacto" class="text-orange-500 hover:underline">Contacto</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Componentes comunes (Footer) -->
+<div id="common-components"></div>
