@@ -1,1 +1,54 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #1a1a1a;
+    --secondary: #f59e0b;
+    --accent: #ec4899;
+    --background: #fef7ed;
+    --surface: #ffffff;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-[var(--primary)] text-white font-semibold rounded-lg border-2 border-[var(--primary)] shadow-lg hover:shadow-xl hover:translate-y-[-2px] transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-transparent text-[var(--primary)] font-semibold rounded-lg border-2 border-[var(--primary)] hover:bg-[var(--primary)] hover:text-white transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-xl;
+  }
+
+  .section-padding {
+    @apply py-16 px-4 md:px-8 lg:px-16;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-[var(--secondary)] to-[var(--accent)] bg-clip-text text-transparent;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}

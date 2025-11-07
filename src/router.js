@@ -1,5 +1,3 @@
-// src/router.js
-
 const routes = {
   "/": {
     view: "Home",
@@ -95,10 +93,8 @@ export async function router() {
   const viewHtml = await loadResource(route.view, "view");
   document.getElementById("app").innerHTML = viewHtml;
 
-  // Cargar componentes comunes
   await loadComponents(COMMON_COMPONENTS, "common-components");
 
-  // Cargar componentes específicos
   for (const { name, container } of route.components) {
     await loadComponents([name], container);
   }
