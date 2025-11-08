@@ -9,6 +9,7 @@ const routes = {
       { name: "SeccionEstrategia", container: "seccion-estrategia" },
       { name: "SeccionServicios", container: "seccion-servicios" },
       { name: "SeccionContacto", container: "seccion-contacto" },
+      { name: "CommonComponents", container: "common-components" },
     ],
   },
   "/about": {
@@ -18,6 +19,7 @@ const routes = {
       { name: "SeccionMetodologia", container: "seccion-metodologia" },
       { name: "SeccionEquipo", container: "seccion-equipo" },
       { name: "SeccionPremios", container: "seccion-premios" },
+      { name: "CommonComponents", container: "common-components" },
     ],
   },
   "/services": {
@@ -32,6 +34,7 @@ const routes = {
         name: "SeccionContactoFormulario",
         container: "seccion-contacto-formulario",
       },
+      { name: "CommonComponents", container: "common-components" },
     ],
   },
   "/contacto": {
@@ -41,6 +44,7 @@ const routes = {
         name: "SeccionContactoPrincipal",
         container: "seccion-contacto-principal",
       },
+      { name: "CommonComponents", container: "common-components" },
     ],
   },
   "/404": { view: "Error404", components: [] },
@@ -52,6 +56,7 @@ const routes = {
     view: "AvisoLegal",
     components: [
       { name: "SeccionAvisoLegal", container: "seccion-aviso-legal" },
+      { name: "CommonComponents", container: "common-components" },
     ],
   },
 };
