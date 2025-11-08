@@ -378,7 +378,7 @@
 \r
             <div class="relative">\r
                 <div class="relative float-animation">\r
-                    <img src="/img/Collaborate.svg" alt="Equipo colaborando en un proyecto creativo"\r
+                    <img src="./img/Collaborate.svg" alt="Equipo colaborando en un proyecto creativo"\r
                         class="w-full max-w-lg mx-auto lg:max-w-none transform hover:scale-105 transition-transform duration-500"\r
                         loading="eager" />\r
 \r
