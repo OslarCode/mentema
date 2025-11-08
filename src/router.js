@@ -1,5 +1,19 @@
-const BASE_URL = import.meta.env.BASE_URL;
-const BASE_TRIM = BASE_URL.replace(/\/$/, "");
+// src/router.js
+
+// BASE_URL de Vite: '/' en dev y '/mentema/' en Pages
+const BASE_URL = import.meta.env.BASE_URL; // p.ej. '/mentema/'
+const BASE_TRIM = BASE_URL.replace(/\/$/, ""); // p.ej. '/mentema'
+
+// Importa TODAS las vistas y componentes como texto en tiempo de build
+// Así evitamos fetch/404 en GitHub Pages
+const VIEW_MAP = import.meta.glob("./views/**/*.html", {
+  as: "raw",
+  eager: true,
+});
+const COMP_MAP = import.meta.glob("./components/**/*.html", {
+  as: "raw",
+  eager: true,
+});
 
 const routes = {
   "/": {
@@ -9,7 +23,6 @@ const routes = {
       { name: "SeccionEstrategia", container: "seccion-estrategia" },
       { name: "SeccionServicios", container: "seccion-servicios" },
       { name: "SeccionContacto", container: "seccion-contacto" },
-      { name: "CommonComponents", container: "common-components" },
     ],
   },
   "/about": {
@@ -19,7 +32,6 @@ const routes = {
       { name: "SeccionMetodologia", container: "seccion-metodologia" },
       { name: "SeccionEquipo", container: "seccion-equipo" },
       { name: "SeccionPremios", container: "seccion-premios" },
-      { name: "CommonComponents", container: "common-components" },
     ],
   },
   "/services": {
@@ -34,7 +46,6 @@ const routes = {
         name: "SeccionContactoFormulario",
         container: "seccion-contacto-formulario",
       },
-      { name: "CommonComponents", container: "common-components" },
     ],
   },
   "/contacto": {
@@ -44,10 +55,8 @@ const routes = {
         name: "SeccionContactoPrincipal",
         container: "seccion-contacto-principal",
       },
-      { name: "CommonComponents", container: "common-components" },
     ],
   },
-  "/404": { view: "Error404", components: [] },
   "/privacidad": {
     view: "Privacidad",
     components: [{ name: "SeccionPolitica", container: "seccion-politica" }],
@@ -56,59 +65,70 @@ const routes = {
     view: "AvisoLegal",
     components: [
       { name: "SeccionAvisoLegal", container: "seccion-aviso-legal" },
-      { name: "CommonComponents", container: "common-components" },
     ],
   },
+  "/404": { view: "Error404", components: [] },
 };
 
-const COMMON_COMPONENTS = ["Footer"];
-const viewCache = {};
-
-async function loadResource(path, type = "view") {
-  const dir = type === "view" ? "./views/" : "./components/";
-  const url = new URL(`${dir}${path}.html`, import.meta.url);
-
-  if (viewCache[url]) return viewCache[url];
-
-  try {
-    const res = await fetch(url);
-    if (!res.ok) throw new Error(`Error al cargar ${type}: ${url}`);
-    const html = await res.text();
-    viewCache[url] = html;
-    return html;
-  } catch (err) {
-    console.error(err);
-    return type === "view" ? loadResource("Error404", "view") : "";
-  }
+// Utilidades para obtener HTML estático desde los mapas
+function getViewHtml(viewName) {
+  return (
+    VIEW_MAP[`./views/${viewName}.html`] ??
+    VIEW_MAP[`./views/Error404.html`] ??
+    `<main class="p-8"><h1>404</h1><p>Vista no encontrada.</p></main>`
+  );
+}
+function getComponentHtml(componentName) {
+  return COMP_MAP[`./components/${componentName}.html`] ?? "";
 }
 
 async function loadComponents(components, containerId) {
-  const container = document.getElementById(containerId);
-  if (!container) return;
-  const html = await Promise.all(
-    components.map((c) => loadResource(c, "component"))
-  );
-  container.innerHTML = html.join("");
+  let container = document.getElementById(containerId);
+  if (!container) {
+    // Fallback: inserta en #app para no quedar en blanco si falta el contenedor
+    console.warn(
+      `[router] contenedor #${containerId} no existe. Inserto al final de #app.`
+    );
+    container = document.getElementById("app");
+    if (!container) return;
+  }
+  const html = components.map((c) => getComponentHtml(c));
+  container.insertAdjacentHTML("beforeend", html.join(""));
 }
 
 export async function router() {
-  let path = window.location.pathname.toLowerCase();
+  // Normaliza la ruta actual y quita el prefijo BASE en producción (p.ej. '/mentema')
+  let path = window.location.pathname;
 
   if (BASE_TRIM && path.startsWith(BASE_TRIM)) {
     path = path.slice(BASE_TRIM.length) || "/";
   }
-
+  path = path || "/";
   if (!path.startsWith("/")) path = `/${path}`;
 
-  const route = routes[path] || routes["/404"];
+  const def = routes[path] || routes["/404"];
 
-  const viewHtml = await loadResource(route.view, "view");
-  document.getElementById("app").innerHTML = viewHtml;
+  // Pinta la vista
+  const viewHtml = getViewHtml(def.view);
+  const app = document.getElementById("app");
+  if (app) app.innerHTML = viewHtml;
 
-  await loadComponents(COMMON_COMPONENTS, "common-components");
+  // Inserta el footer común si existe el contenedor
+  // Puedes crear <div id="common-components"></div> dentro de cada vista
+  const common = getComponentHtml("Footer");
+  const commonContainer = document.getElementById("common-components");
+  if (commonContainer) {
+    commonContainer.innerHTML = common;
+  } else if (app) {
+    // fallback si no hay contenedor dedicado
+    app.insertAdjacentHTML("beforeend", common);
+  }
 
-  for (const { name, container } of route.components) {
-    await loadComponents([name], container);
+  // Inserta los componentes específicos de la ruta
+  if (def.components?.length) {
+    for (const { name, container } of def.components) {
+      await loadComponents([name], container);
+    }
   }
 }
 
@@ -117,38 +137,40 @@ export function handleLinkClicks() {
     const link = e.target.closest("a[href]");
     if (!link) return;
 
+    // Enlaces externos o _blank: dejarlos pasar
     if (
-      (link.href.startsWith("http") &&
-        !link.href.includes(window.location.origin)) ||
+      (/^https?:\/\//i.test(link.href) &&
+        !link.href.startsWith(window.location.origin)) ||
       link.target === "_blank"
     ) {
       return;
     }
 
     const raw = link.getAttribute("href") || "/";
-    const isHash = raw.startsWith("#");
-    if (isHash) return;
+    if (raw.startsWith("#")) return; // anclas internas
 
+    // Normaliza ruta
     let path = raw.startsWith("/") ? raw : `/${raw}`;
 
-    const currentPath =
+    // Evita navegación redundante
+    const current =
       window.location.pathname.replace(new RegExp(`^${BASE_TRIM}`), "") || "/";
-    if (path === currentPath || path === window.location.pathname) return;
+    if (path === current) return;
 
     e.preventDefault();
 
+    // Construye URL con base en producción
     const nextUrl = `${BASE_TRIM}${path}`;
     window.history.pushState(null, "", nextUrl);
 
-    document.dispatchEvent(new CustomEvent("routeChangeStart"));
-    await new Promise((r) => setTimeout(r, 50));
     await router();
-    document.dispatchEvent(new CustomEvent("routeChangeComplete"));
   });
 }
 
+// Precarga ligera (opcional)
 document.addEventListener("DOMContentLoaded", () => {
-  ["Home", "About", "Error404"].forEach((v) => loadResource(v, "view"));
+  // No hace falta con glob eager, pero puedes mantenerla por si cambias la estrategia
 });
 
+// Flechas del navegador (por si importan router.js directo)
 window.addEventListener("popstate", router);
