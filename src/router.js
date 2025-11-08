@@ -1,3 +1,7 @@
+// Prefijo base: '/' en dev, '/mentema/' en GitHub Pages (se define en vite.config.*
+const BASE_URL = import.meta.env.BASE_URL; // p.ej. '/mentema/'
+const BASE_TRIM = BASE_URL.replace(/\/$/, ""); // p.ej. '/mentema'
+
 const routes = {
   "/": {
     view: "Home",
@@ -40,10 +44,7 @@ const routes = {
       },
     ],
   },
-  "/404": {
-    view: "Error404",
-    components: [],
-  },
+  "/404": { view: "Error404", components: [] },
   "/privacidad": {
     view: "Privacidad",
     components: [{ name: "SeccionPolitica", container: "seccion-politica" }],
@@ -59,9 +60,10 @@ const routes = {
 const COMMON_COMPONENTS = ["Footer"];
 const viewCache = {};
 
+// Carga de vistas y componentes como assets del bundle (sin rutas absolutas)
 async function loadResource(path, type = "view") {
-  const basePath = type === "view" ? "/src/views/" : "/src/components/";
-  const url = `${basePath}${path}.html`;
+  const dir = type === "view" ? "./views/" : "./components/";
+  const url = new URL(`${dir}${path}.html`, import.meta.url); // se resuelve en build
 
   if (viewCache[url]) return viewCache[url];
 
@@ -87,7 +89,16 @@ async function loadComponents(components, containerId) {
 }
 
 export async function router() {
-  const path = window.location.pathname.toLowerCase();
+  // Obtén la ruta actual y elimina el prefijo BASE cuando exista (p.ej. '/mentema')
+  let path = window.location.pathname.toLowerCase();
+
+  if (BASE_TRIM && path.startsWith(BASE_TRIM)) {
+    path = path.slice(BASE_TRIM.length) || "/";
+  }
+
+  // Normaliza a '/...'
+  if (!path.startsWith("/")) path = `/${path}`;
+
   const route = routes[path] || routes["/404"];
 
   const viewHtml = await loadResource(route.view, "view");
@@ -105,18 +116,34 @@ export function handleLinkClicks() {
     const link = e.target.closest("a[href]");
     if (!link) return;
 
+    // Externos o _blank: deja pasar
     if (
       (link.href.startsWith("http") &&
         !link.href.includes(window.location.origin)) ||
       link.target === "_blank"
-    )
+    ) {
       return;
+    }
 
-    const path = new URL(link.href).pathname;
-    if (path === window.location.pathname) return;
+    // Calcula destino interno a partir del atributo href (no del href absoluto)
+    const raw = link.getAttribute("href") || "/";
+    const isHash = raw.startsWith("#");
+    if (isHash) return; // anclas internas: deja el comportamiento por defecto
+
+    // Normaliza a '/ruta'
+    let path = raw.startsWith("/") ? raw : `/${raw}`;
+
+    // Evita recargar misma ruta
+    const currentPath =
+      window.location.pathname.replace(new RegExp(`^${BASE_TRIM}`), "") || "/";
+    if (path === currentPath || path === window.location.pathname) return;
 
     e.preventDefault();
-    window.history.pushState(null, null, link.href);
+
+    // Construye URL con BASE en producción
+    const nextUrl = `${BASE_TRIM}${path}`;
+    window.history.pushState(null, "", nextUrl);
+
     document.dispatchEvent(new CustomEvent("routeChangeStart"));
     await new Promise((r) => setTimeout(r, 50));
     await router();
@@ -124,8 +151,10 @@ export function handleLinkClicks() {
   });
 }
 
-window.addEventListener("popstate", router);
-
+// Pre-carga ligera de vistas frecuentes
 document.addEventListener("DOMContentLoaded", () => {
   ["Home", "About", "Error404"].forEach((v) => loadResource(v, "view"));
 });
+
+// popstate también aquí por si se importa router.js directamente
+window.addEventListener("popstate", router);
