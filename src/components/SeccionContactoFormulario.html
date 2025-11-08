@@ -1,43 +1,82 @@
-<section class="bg-[#f4efe4] py-12 px-4 md:px-12 lg:px-24">
-    <div class="max-w-7xl mx-auto rounded-2xl border border-4 border-black overflow-hidden">
-        <div class="grid md:grid-cols-2 items-center bg-[#f4efe4]">
-
-            <div class="p-8 flex justify-center">
-                <img src="/img/Work_space.svg" alt="Ilustración espacio de trabajo" class="w-full max-w-md">
+<section class="bg-[#fef7ed] py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="relative">
+                <div class="float-animation">
+                    <img src="/img/Work_space.svg" alt="Ilustración espacio de trabajo colaborativo"
+                        class="w-full max-w-md mx-auto lg:max-w-none transform hover:scale-105 transition-transform duration-500"
+                        loading="lazy" />
+                </div>
+                <div class="absolute -top-4 -left-4 w-20 h-20 bg-orange-400/10 rounded-2xl rotate-12 blur-lg"></div>
+                <div class="absolute -bottom-4 -right-4 w-16 h-16 bg-pink-400/10 rounded-2xl -rotate-12 blur-lg"></div>
             </div>
 
-            <div class="p-8">
-                <p class="uppercase text-sm tracking-wide mb-2 font-semibold">Contacto</p>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-6">
-                    Hagamos crecer<br />tu marca juntos
+            <div class="space-y-8">
+                <div
+                    class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 border border-orange-200 shadow-sm">
+                    <span class="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span>
+                    <span class="text-sm font-medium text-gray-700">Contacto</span>
+                </div>
+
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                    Hagamos Crecer
+                    <span
+                        class="block bg-gradient-to-r from-orange-600 via-pink-600 to-purple-600 bg-clip-text text-transparent">
+                        tu Marca Juntos
+                    </span>
                 </h2>
+
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    Estamos listos para escuchar tus ideas y transformarlas en realidad. Cuéntanos sobre tu proyecto y
+                    comencemos a trabajar.
+                </p>
 
                 <form class="space-y-6">
                     <div>
-                        <label class="block text-sm font-semibold mb-1" for="name">Name</label>
-                        <input type="text" id="name" name="name"
-                            class="w-full border-0 border-b border-black bg-transparent focus:ring-0 focus:border-black text-gray-800 placeholder-gray-400">
+                        <label class="block text-sm font-semibold text-gray-700 mb-3" for="name">Nombre</label>
+                        <input type="text" id="name" name="name" placeholder="Tu nombre completo"
+                            class="w-full bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl px-6 py-4 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 hover:border-gray-300">
                     </div>
 
                     <div>
-                        <label class="block text-sm font-semibold mb-1" for="email">Email Address</label>
-                        <input type="email" id="email" name="email"
-                            class="w-full border-0 border-b border-black bg-transparent focus:ring-0 focus:border-black text-gray-800 placeholder-gray-400">
+                        <label class="block text-sm font-semibold text-gray-700 mb-3" for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="tu@email.com"
+                            class="w-full bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl px-6 py-4 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 hover:border-gray-300">
                     </div>
 
                     <div>
-                        <label class="block text-sm font-semibold mb-1" for="message">Message</label>
-                        <textarea id="message" name="message" rows="4"
-                            class="w-full border-0 border-b border-black bg-transparent focus:ring-0 focus:border-black text-gray-800 placeholder-gray-400"></textarea>
+                        <label class="block text-sm font-semibold text-gray-700 mb-3" for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Cuéntanos sobre tu proyecto..."
+                            class="w-full bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl px-6 py-4 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 hover:border-gray-300 resize-none"></textarea>
                     </div>
 
-                    <div class="pt-2">
+                    <div class="pt-4">
                         <button type="submit"
-                            class="bg-yellow-400 text-black px-5 py-2 rounded-md border-2 border-black shadow-[3px_3px_0px_0px_black] hover:translate-x-[1px] hover:translate-y-[1px] transition-transform duration-150">
-                            Submit
+                            class="group relative inline-flex items-center justify-center w-full px-8 py-4 bg-gray-900 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transform hover:translate-y-[-2px] transition-all duration-300 overflow-hidden">
+                            <span class="relative z-10">Enviar Mensaje</span>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-orange-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            </div>
                         </button>
                     </div>
                 </form>
+            </div>
+        </div>
+
+        <div class="mt-16 pt-8 border-t border-gray-200/50">
+            <div class="flex flex-wrap gap-8 justify-center text-center text-sm text-gray-500">
+                <div class="flex items-center gap-2">
+                    <div class="w-1 h-1 bg-orange-500 rounded-full"></div>
+                    <span>Respuesta en 24 horas</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="w-1 h-1 bg-blue-500 rounded-full"></div>
+                    <span>Consulta sin compromiso</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="w-1 h-1 bg-purple-500 rounded-full"></div>
+                    <span>Presupuesto personalizado</span>
+                </div>
             </div>
         </div>
     </div>

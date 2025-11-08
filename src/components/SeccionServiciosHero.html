@@ -1,30 +1,103 @@
-<section class="bg-[#f6f1e9] border-4 border-black rounded-xl max-w-6xl mx-4 md:mx-auto overflow-hidden mt-16">
+<section id="seccion-servicios-hero"
+    class="relative bg-[#fef7ed] min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-orange-50/50 via-yellow-50/30 to-pink-50/50"></div>
 
-    <div class="h-4 w-full bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-500"></div>
+    <div class="absolute top-10 left-10 w-20 h-20 bg-yellow-400/10 rounded-full blur-xl"></div>
+    <div class="absolute bottom-20 right-20 w-32 h-32 bg-pink-400/10 rounded-full blur-2xl"></div>
+    <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-orange-400/10 rounded-full blur-lg"></div>
 
-    <div class="grid md:grid-cols-2 gap-8 px-6 py-12 items-center">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="text-center lg:text-left space-y-8">
+                <div
+                    class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 border border-orange-200 shadow-sm">
+                    <span class="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span>
+                    <span class="text-sm font-medium text-gray-700">Nuestros Servicios</span>
+                </div>
 
-        <div class="space-y-6">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                    Renovamos
+                    <span
+                        class="block bg-gradient-to-r from-orange-600 via-pink-600 to-purple-600 bg-clip-text text-transparent">
+                        tu Marca
+                    </span>
+                    para Destacar
+                </h1>
 
-            <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-gray-900">
-                Renovamos<br />tu marca<br />para destacar
-            </h2>
+                <p class="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-2xl">
+                    Transformamos tu identidad visual con <span class="font-semibold text-orange-600">estrategia y
+                        diseño</span>
+                    que conecta con tu audiencia y refleja quién eres realmente.
+                </p>
 
-            <p class="text-gray-700 text-base md:text-lg">
-                ¿Tu marca ya no refleja quién eres? En Mentema te ayudamos a revitalizar tu identidad visual,
-                tono de comunicación y presencia digital.<br />
-                Tanto si partes desde cero como si necesitas evolucionar tu branding, tenemos el enfoque adecuado.
-            </p>
+                <div class="flex flex-wrap gap-6 justify-center lg:justify-start text-center">
+                    <div class="space-y-1">
+                        <div class="text-2xl font-bold text-gray-900">100%</div>
+                        <div class="text-sm text-gray-500">Personalizado</div>
+                    </div>
+                    <div class="space-y-1">
+                        <div class="text-2xl font-bold text-gray-900">360°</div>
+                        <div class="text-sm text-gray-500">Enfoque Integral</div>
+                    </div>
+                    <div class="space-y-1">
+                        <div class="text-2xl font-bold text-gray-900">+50</div>
+                        <div class="text-sm text-gray-500">Marcas Renovadas</div>
+                    </div>
+                </div>
 
-            <a href="/about"
-                class="inline-block px-6 py-2 bg-[#f5f0e6] text-black font-semibold rounded border border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:translate-x-[1px] hover:translate-y-[1px] transition duration-200">
-                BRANDING
-            </a>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="/contacto"
+                        class="group relative inline-flex items-center justify-center px-8 py-4 bg-gray-900 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transform hover:translate-y-[-2px] transition-all duration-300 overflow-hidden">
+                        <span class="relative z-10">Iniciar Proyecto</span>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-orange-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                    </a>
+
+                    <a href="/servicios"
+                        class="group inline-flex items-center justify-center px-8 py-4 bg-transparent text-gray-900 font-semibold rounded-2xl border-2 border-gray-300 hover:border-gray-400 hover:bg-gray-50 transform hover:translate-y-[-2px] transition-all duration-300">
+                        <span>Ver Todos los Servicios</span>
+                        <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="relative float-animation">
+                    <img src="/img/Under-construction.svg" alt="Servicios de branding y diseño web"
+                        class="w-full max-w-lg mx-auto lg:max-w-none transform hover:scale-105 transition-transform duration-500"
+                        loading="eager" />
+
+                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-yellow-400/20 rounded-2xl rotate-12 blur-sm">
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 w-20 h-20 bg-pink-400/20 rounded-2xl -rotate-12 blur-sm">
+                    </div>
+                </div>
+
+                <div
+                    class="absolute bottom-8 left-0 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-gray-200 max-w-xs transform hover:scale-105 transition-all duration-300">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">🚀</span>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-gray-900">"Renovaron nuestra identidad por completo"</p>
+                            <p class="text-xs text-gray-500 mt-1">Cliente Satisfecho</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div>
-            <img src="/img/Under-construction.svg" alt="Ilustración diseño web" class="w-full h-auto rounded-md" />
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div class="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
+                <div class="w-1 h-3 bg-gray-400 rounded-full mt-2"></div>
+            </div>
         </div>
     </div>
-
 </section>
