@@ -1,97 +1,203 @@
 # Mentema
 
-**Mentema** es una **Agencia Creativa Integral para Marcas con Visión**. Este proyecto representa la presencia online de la marca, con un diseño moderno, accesible, responsivo y centrado en transmitir el valor de la creatividad estratégica. La plataforma está construida con tecnologías web actuales, optimizadas para rendimiento y mantenibilidad.
+**Mentema** es una **Agencia Creativa Integral para Marcas con Vision**. Este proyecto representa la presencia online de la marca, con un diseño moderno, accesible, responsivo y centrado en transmitir el valor de la creatividad estratégica. La plataforma está construida con tecnologías web actuales, optimizadas para rendimiento y mantenibilidad.
 
-## 🌱 Objetivo de la marca
+## Características Principales
+
+- **Diseño Moderno** - Interfaz limpia y profesional con gradientes sutiles y animaciones elegantes
+- **Completamente Responsive** - Adaptado a todos los dispositivos y tamaños de pantalla
+- **Rendimiento Optimizado** - Carga ultrárpida con Vite y optimizaciones de Tailwind CSS
+- **Enfoque SPA** - Single Page Application con navegación fluida
+- **Accesibilidad** - Diseño accesible siguiendo las mejores prácticas WCAG
+- **Tecnología Moderna** - Stack actualizado sin dependencias innecesarias
+
+## Objetivo de la Marca
 
 Mentema nace con el propósito de acompañar a marcas ambiciosas en su transformación, ayudándolas a conectar con su audiencia a través del diseño, la estrategia y la innovación. Nuestra visión se basa en el poder de la creatividad para generar impacto real y duradero.
 
----
+## Stack Tecnológico
 
-## 🚀 Tecnologías utilizadas
+| Tecnología         | Propósito                          |
+| ------------------ | ---------------------------------- |
+| Vite               | Bundler ultrárpido para desarrollo |
+| Tailwind CSS       | Framework de CSS utilitario        |
+| Vanilla JavaScript | Lógica de aplicación sin overhead  |
+| HTML Modular       | Componentes reutilizables          |
 
-- [Vite](https://vitejs.dev/) — Bundler ultrarrápido.
-- [Tailwind CSS](https://tailwindcss.com/) — Framework de estilos utilitarios.
-- Vanilla JavaScript — Sin frameworks, para un mayor control.
-- HTML modularizado mediante componentes reutilizables.
+## Estructura del Proyecto
 
----
-
-## 📁 Estructura del proyecto
-
-```bash
-src/
-├── components/         # Componentes HTML reutilizables
-├── views/              # Páginas completas
-├── router.js           # Lógica de enrutamiento SPA
-├── main.js             # Punto de entrada JavaScript
-└── style.css           # Estilos globales
+```
+mentema/
+├── src/
+│   ├── components/          # Componentes HTML reutilizables
+│   │   ├── Hero.html
+│   │   ├── SeccionAboutHero.html
+│   │   ├── SeccionMetodologia.html
+│   │   ├── SeccionEquipo.html
+│   │   ├── SeccionPremios.html
+│   │   ├── SeccionServiciosHero.html
+│   │   ├── SeccionServiciosOfertas.html
+│   │   └── SeccionContacto.html
+│   ├── views/               # Páginas completas
+│   ├── router.js            # Sistema de enrutamiento SPA
+│   ├── main.js              # Punto de entrada principal
+│   └── style.css            # Estilos globales
+├── public/
+│   ├── img/                 # Imágenes e ilustraciones
+│   ├── icons/               # Iconos SVG
+│   └── avatar/              # Fotos del equipo
+└── package.json
 ```
 
----
+## Instalación y Desarrollo
 
-## 🛠️ Instalación y ejecución local
+### Prerrequisitos
 
-1. Clona este repositorio:
+- Node.js 16+
+- npm o yarn
+
+### Pasos de Instalación
+
+1. **Clona el repositorio**
 
    ```bash
    git clone https://github.com/tuusuario/mentema.git
-   ```
-
-2. Accede a la carpeta del proyecto:
-
-   ```bash
    cd mentema
    ```
 
-3. Instala las dependencias:
+2. **Instala dependencias**
 
    ```bash
    npm install
    ```
 
-4. Inicia el servidor de desarrollo:
+3. **Inicia el servidor de desarrollo**
 
    ```bash
    npm run dev
    ```
 
+4. **Abre tu navegador**
+   ```
+   http://localhost:5173
+   ```
+
+### Comandos Disponibles
+
+```bash
+npm run dev          # Servidor de desarrollo
+npm run build        # Build para producción
+npm run preview      # Vista previa del build
+```
+
+## Guía de Estilos
+
+### Paleta de Colores
+
+- **Primario**: `#fef7ed` (Fondo principal)
+- **Secundario**: Gradientes naranja-rosa-púrpura
+- **Texto**: Escala de grises para óptima legibilidad
+
+### Tipografía
+
+- **Títulos**: Font-bold con gradientes
+- **Cuerpo**: Texto legible con contraste adecuado
+- **Badges**: Estilos distintivos con puntos animados
+
+### Componentes Principales
+
+- **Hero Sections**: Diseño impactante con elementos flotantes
+- **Tarjetas**: Bordes sutiles con efectos hover
+- **Botones**: Gradientes animados al hover
+- **Formularios**: Diseño limpio con validación visual
+
+## Páginas y Secciones
+
+### Home
+
+- Hero principal con métricas
+- Metodología de trabajo (6 pasos)
+- Equipo creativo
+- Premios y reconocimientos
+
+### About
+
+- Historia y valores
+- Equipo multidisciplinario
+- Enfoque estratégico
+
+### Services
+
+- Servicios creativos (Visual, Video, Online)
+- Procesos personalizados
+- Casos de éxito
+
+### Contact
+
+- Formulario de contacto moderno
+- Información de contacto
+- Consultoría gratuita
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Si deseas colaborar con el proyecto:
+
+1. **Haz un fork** del repositorio
+2. **Crea una rama** para tu feature: `git checkout -b feature/nueva-funcionalidad`
+3. **Realiza tus cambios** y haz commit: `git commit -m 'feat: añade nueva funcionalidad'`
+4. **Haz push** a tu rama: `git push origin feature/nueva-funcionalidad`
+5. **Abre un Pull Request**
+
+### Convenciones de Commits
+
+- `feat:` Nueva funcionalidad
+- `fix:` Corrección de bugs
+- `docs:` Documentación
+- `style:` Cambios de formato
+- `refactor:` Refactorización de código
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT.
+
+## Créditos
+
+**Desarrollado por:** oslar
+
+## Estado del Proyecto
+
+### Completado
+
+- Arquitectura SPA funcional
+- Diseño responsivo completo
+- Sistema de enrutamiento
+- Todas las secciones principales
+- Optimización de rendimiento
+- Estilos consistentes y modernos
+
+### En Progreso
+
+- Integración con backend
+- Formularios funcionales
+- Optimización SEO avanzada
+- Pruebas unitarias
+
+### Próximas Características
+
+- Sistema de blog integrado
+- Panel administrativo
+- Internacionalización (i18n)
+- Modo oscuro
+- Integración con CMS
+
+## Demo y Enlaces
+
+- **Demo en Vivo**: mentema.com
+- **Repositorio**: github.com/tuusuario/mentema
+- **Documentación**: Wiki del proyecto
+
 ---
 
-## 🤝 Contribuciones
+**Hecho con dedicación para marcas que inspiran**
 
-¡Las contribuciones son bienvenidas! Si deseas colaborar con el proyecto:
-
-1. Haz un fork del repositorio.
-2. Crea una rama con tu funcionalidad: `git checkout -b feature/mi-mejora`
-3. Realiza tus cambios y haz commit: `git commit -m 'Mejora: nueva funcionalidad'`
-4. Haz push a tu rama: `git push origin feature/mi-mejora`
-5. Abre un Pull Request.
-
----
-
-## 🔒 Licencia
-
-Este proyecto está licenciado bajo la [Licencia MIT](LICENSE).
-
----
-
-## 👤 Créditos
-
-Proyecto desarrollado por **oslar**.
-
----
-
-## 📌 Estado actual
-
-- ✅ SPA funcional con rutas gestionadas por JavaScript.
-- ✅ Diseño responsivo y estructura modular.
-- ✅ Páginas principales: Home, About, Services, Contact.
-- ⏳ Formularios no funcionales por el momento.
-- ❌ Sin backend asociado actualmente.
-
----
-
-## 🌐 Público
-
-Este repositorio es público y sirve como base para la plataforma web de Mentema, alineada con los valores de creatividad, estrategia y visión de marca.
+_"Creamos experiencias que conectan"_
