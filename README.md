@@ -1,15 +1,15 @@
 # Mentema
 
-**Mentema** es una **Agencia Creativa Integral para Marcas con Visión**. Este proyecto representa la presencia online de la marca, construida con un diseño moderno, accesible, responsivo y optimizado para rendimiento. Su objetivo es transmitir el valor de la creatividad estratégica a través de una experiencia digital fluida y profesional.
+Mentema es una Agencia Creativa Integral para Marcas con Visión. Este proyecto representa la presencia online de la marca, construida con un diseño moderno, accesible, responsivo y optimizado para rendimiento. Su objetivo es transmitir el valor de la creatividad estratégica a través de una experiencia digital fluida y profesional.
 
 ## Características Principales
 
-- **Diseño Moderno:** Interfaz limpia y profesional con gradientes sutiles y animaciones elegantes.
-- **Completamente Responsive:** Se adapta perfectamente a todos los dispositivos y tamaños de pantalla.
-- **Rendimiento Optimizado:** Carga ultrarrápida gracias a Vite y optimizaciones de Tailwind CSS.
-- **Enfoque SPA (Single Page Application):** Navegación fluida sin recargas de página.
-- **Accesibilidad:** Desarrollado siguiendo las mejores prácticas WCAG.
-- **Tecnología Moderna:** Stack actualizado, minimalista y sin dependencias innecesarias.
+- Diseño Moderno: Interfaz limpia y profesional con gradientes sutiles y animaciones elegantes.
+- Completamente Responsive: Se adapta perfectamente a todos los dispositivos y tamaños de pantalla.
+- Rendimiento Optimizado: Carga ultrarrápida gracias a Vite y optimizaciones de Tailwind CSS.
+- Enfoque SPA (Single Page Application): Navegación fluida sin recargas de página.
+- Accesibilidad: Desarrollado siguiendo las mejores prácticas WCAG.
+- Tecnología Moderna: Stack actualizado, minimalista y sin dependencias innecesarias.
 
 ## Objetivo de la Marca
 
@@ -99,13 +99,13 @@ Ve a `http://localhost:5173`
 
 ### Paleta de Colores
 
-- **Primario:** `#fef7ed` (Fondo principal)
-- **Secundario:** Gradientes dinámicos (naranja-rosa-púrpura)
+- Primario: `#fef7ed` (Fondo principal)
+- Secundario: Gradientes dinámicos (naranja-rosa-púrpura)
 - **Texto:** Escala de grises para máxima legibilidad y contraste
 
 ### Tipografía
 
-- **Títulos:** Fuente en peso `bold` con aplicaciones de gradiente
+- Títulos: Fuente en peso `bold` con aplicaciones de gradiente
 - **Cuerpo:** Texto legible con contraste adecuado
 - **Badges:** Estilos distintivos con puntos animados
 
