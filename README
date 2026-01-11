@@ -1,35 +1,35 @@
 # Mentema
 
-**Mentema** es una **Agencia Creativa Integral para Marcas con Vision**. Este proyecto representa la presencia online de la marca, con un diseño moderno, accesible, responsivo y centrado en transmitir el valor de la creatividad estratégica. La plataforma está construida con tecnologías web actuales, optimizadas para rendimiento y mantenibilidad.
+**Mentema** es una **Agencia Creativa Integral para Marcas con Visión**. Este proyecto representa la presencia online de la marca, construida con un diseño moderno, accesible, responsivo y optimizado para rendimiento. Su objetivo es transmitir el valor de la creatividad estratégica a través de una experiencia digital fluida y profesional.
 
 ## Características Principales
 
-- **Diseño Moderno** - Interfaz limpia y profesional con gradientes sutiles y animaciones elegantes
-- **Completamente Responsive** - Adaptado a todos los dispositivos y tamaños de pantalla
-- **Rendimiento Optimizado** - Carga ultrárpida con Vite y optimizaciones de Tailwind CSS
-- **Enfoque SPA** - Single Page Application con navegación fluida
-- **Accesibilidad** - Diseño accesible siguiendo las mejores prácticas WCAG
-- **Tecnología Moderna** - Stack actualizado sin dependencias innecesarias
+- **Diseño Moderno:** Interfaz limpia y profesional con gradientes sutiles y animaciones elegantes.
+- **Completamente Responsive:** Se adapta perfectamente a todos los dispositivos y tamaños de pantalla.
+- **Rendimiento Optimizado:** Carga ultrarrápida gracias a Vite y optimizaciones de Tailwind CSS.
+- **Enfoque SPA (Single Page Application):** Navegación fluida sin recargas de página.
+- **Accesibilidad:** Desarrollado siguiendo las mejores prácticas WCAG.
+- **Tecnología Moderna:** Stack actualizado, minimalista y sin dependencias innecesarias.
 
 ## Objetivo de la Marca
 
-Mentema nace con el propósito de acompañar a marcas ambiciosas en su transformación, ayudándolas a conectar con su audiencia a través del diseño, la estrategia y la innovación. Nuestra visión se basa en el poder de la creatividad para generar impacto real y duradero.
+Mentema nace con el propósito de acompañar a marcas ambiciosas en su transformación, ayudándolas a conectar con su audiencia a través del diseño, la estrategia y la innovación. Creemos en el poder de la creatividad para generar impacto real y duradero.
 
 ## Stack Tecnológico
 
-| Tecnología         | Propósito                          |
-| ------------------ | ---------------------------------- |
-| Vite               | Bundler ultrárpido para desarrollo |
-| Tailwind CSS       | Framework de CSS utilitario        |
-| Vanilla JavaScript | Lógica de aplicación sin overhead  |
-| HTML Modular       | Componentes reutilizables          |
+| Tecnología         | Propósito                                     |
+| ------------------ | --------------------------------------------- |
+| Vite               | Bundler y herramienta de desarrollo ultrarrápido |
+| Tailwind CSS       | Framework de CSS utilitario para un desarrollo ágil |
+| Vanilla JavaScript | Lógica de aplicación ligera y eficiente       |
+| HTML Modular       | Componentes reutilizables para mejor mantenibilidad |
 
 ## Estructura del Proyecto
 
 ```
 mentema/
 ├── src/
-│   ├── components/          # Componentes HTML reutilizables
+│   ├── components/
 │   │   ├── Hero.html
 │   │   ├── SeccionAboutHero.html
 │   │   ├── SeccionMetodologia.html
@@ -38,128 +38,128 @@ mentema/
 │   │   ├── SeccionServiciosHero.html
 │   │   ├── SeccionServiciosOfertas.html
 │   │   └── SeccionContacto.html
-│   ├── views/               # Páginas completas
-│   ├── router.js            # Sistema de enrutamiento SPA
-│   ├── main.js              # Punto de entrada principal
-│   └── style.css            # Estilos globales
+│   ├── views/
+│   ├── router.js
+│   ├── main.js
+│   └── style.css
 ├── public/
-│   ├── img/                 # Imágenes e ilustraciones
-│   ├── icons/               # Iconos SVG
-│   └── avatar/              # Fotos del equipo
-└── package.json
+│   ├── img/
+│   ├── icons/
+│   └── avatar/
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
 ```
 
 ## Instalación y Desarrollo
 
 ### Prerrequisitos
 
-- Node.js 16+
+- Node.js 16 o superior
 - npm o yarn
 
 ### Pasos de Instalación
 
 1. **Clona el repositorio**
 
-   ```bash
-   git clone https://github.com/tuusuario/mentema.git
-   cd mentema
-   ```
+```bash
+git clone https://github.com/tuusuario/mentema.git
+cd mentema
+```
 
-2. **Instala dependencias**
+2. **Instala las dependencias**
 
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+# o
+yarn install
+```
 
 3. **Inicia el servidor de desarrollo**
 
-   ```bash
-   npm run dev
-   ```
+```bash
+npm run dev
+# o
+yarn dev
+```
 
 4. **Abre tu navegador**
-   ```
-   http://localhost:5173
-   ```
+Ve a `http://localhost:5173`
 
 ### Comandos Disponibles
 
-```bash
-npm run dev          # Servidor de desarrollo
-npm run build        # Build para producción
-npm run preview      # Vista previa del build
-```
+| Comando           | Descripción                                      |
+| ----------------- | ------------------------------------------------ |
+| `npm run dev`     | Inicia el servidor de desarrollo con Hot Reload  |
+| `npm run build`   | Genera una versión optimizada para producción    |
+| `npm run preview` | Sirve localmente la versión de producción para pruebas |
 
 ## Guía de Estilos
 
 ### Paleta de Colores
 
-- **Primario**: `#fef7ed` (Fondo principal)
-- **Secundario**: Gradientes naranja-rosa-púrpura
-- **Texto**: Escala de grises para óptima legibilidad
+- **Primario:** `#fef7ed` (Fondo principal)
+- **Secundario:** Gradientes dinámicos (naranja-rosa-púrpura)
+- **Texto:** Escala de grises para máxima legibilidad y contraste
 
 ### Tipografía
 
-- **Títulos**: Font-bold con gradientes
-- **Cuerpo**: Texto legible con contraste adecuado
-- **Badges**: Estilos distintivos con puntos animados
+- **Títulos:** Fuente en peso `bold` con aplicaciones de gradiente
+- **Cuerpo:** Texto legible con contraste adecuado
+- **Badges:** Estilos distintivos con puntos animados
 
 ### Componentes Principales
 
-- **Hero Sections**: Diseño impactante con elementos flotantes
-- **Tarjetas**: Bordes sutiles con efectos hover
-- **Botones**: Gradientes animados al hover
-- **Formularios**: Diseño limpio con validación visual
+- **Hero Sections:** Diseño impactante con elementos visuales flotantes
+- **Tarjetas:** Bordes sutiles y efectos `hover` elegantes
+- **Botones:** Gradientes animados en interacción
+- **Formularios:** Diseño limpio con feedback visual para la validación
 
 ## Páginas y Secciones
 
-### Home
+### Home (/)
+- Hero principal con métricas clave
+- Metodología de trabajo (proceso de 6 pasos)
+- Presentación del equipo creativo
+- Galería de premios y reconocimientos
 
-- Hero principal con métricas
-- Metodología de trabajo (6 pasos)
-- Equipo creativo
-- Premios y reconocimientos
+### About (/about)
+- Historia, misión y valores de la agencia
+- Perfiles del equipo multidisciplinario
+- Explicación del enfoque estratégico
 
-### About
+### Services (/services)
+- Catálogo de servicios (Visual, Video, Online)
+- Descripción de procesos personalizados
+- Muestra de casos de éxito
 
-- Historia y valores
-- Equipo multidisciplinario
-- Enfoque estratégico
-
-### Services
-
-- Servicios creativos (Visual, Video, Online)
-- Procesos personalizados
-- Casos de éxito
-
-### Contact
-
+### Contact (/contact)
 - Formulario de contacto moderno
-- Información de contacto
-- Consultoría gratuita
+- Información de contacto directo
+- Oferta de consultoría gratuita
 
 ## Contribuciones
 
-Las contribuciones son bienvenidas. Si deseas colaborar con el proyecto:
+Las contribuciones son bienvenidas. Si deseas mejorar este proyecto:
 
-1. **Haz un fork** del repositorio
-2. **Crea una rama** para tu feature: `git checkout -b feature/nueva-funcionalidad`
-3. **Realiza tus cambios** y haz commit: `git commit -m 'feat: añade nueva funcionalidad'`
-4. **Haz push** a tu rama: `git push origin feature/nueva-funcionalidad`
-5. **Abre un Pull Request**
+1. **Haz un Fork** del repositorio
+2. **Crea una Rama** para tu funcionalidad: `git checkout -b feature/nueva-funcionalidad`
+3. **Realiza tus Cambios** y haz commit: `git commit -m 'feat: añade nueva funcionalidad'`
+4. **Sube los Cambios** a tu rama: `git push origin feature/nueva-funcionalidad`
+5. **Abre un Pull Request** para que revisemos tu contribución
 
 ### Convenciones de Commits
 
-- `feat:` Nueva funcionalidad
-- `fix:` Corrección de bugs
-- `docs:` Documentación
-- `style:` Cambios de formato
-- `refactor:` Refactorización de código
+- `feat:` Para nuevas funcionalidades
+- `fix:` Para corrección de errores
+- `docs:` Para cambios en la documentación
+- `style:` Para cambios de formato (espacios, puntos y coma, etc.)
+- `refactor:` Para refactorización de código que no corrige errores ni añade funcionalidades
 
 ## Licencia
 
-This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
-https://creativecommons.org/licenses/by-nc/4.0/
+Este trabajo está licenciado bajo una [Licencia Creative Commons Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/).
 
 ## Créditos
 
@@ -168,40 +168,34 @@ https://creativecommons.org/licenses/by-nc/4.0/
 ## Estado del Proyecto
 
 ### Completado
-
-- Arquitectura SPA funcional
-- Diseño responsivo completo
-- Sistema de enrutamiento
-- Todas las secciones principales
-- Optimización de rendimiento
-- Estilos consistentes y modernos
+- Arquitectura SPA completamente funcional
+- Diseño responsivo en todas las secciones
+- Sistema de enrutamiento cliente (SPA)
+- Estructura de componentes modular
+- Optimizaciones de rendimiento básicas
+- Guía de estilos consistente y aplicada
 
 ### En Progreso
+- Integración con backend para formularios
+- Mejoras de accesibilidad (ARIA, semántica)
+- Optimización SEO avanzada (meta tags, sitemap)
+- Implementación de pruebas unitarias
 
-- Integración con backend
-- Formularios funcionales
-- Optimización SEO avanzada
-- Pruebas unitarias
-
-### Próximas Características
-
+### Próximas Características (Roadmap)
 - Sistema de blog integrado
-- Panel administrativo
-- Internacionalización (i18n)
-- Modo oscuro
-- Integración con CMS
+- Panel administrativo (CMS Headless)
+- Internacionalización (i18n) para múltiples idiomas
+- Implementación de modo oscuro/claro
+- Integración con herramientas de analítica
 
 ## Demo y Enlaces
 
-- **Demo en Vivo**: mentema.com
-- **Repositorio**: github.com/tuusuario/mentema
-- **Documentación**: Wiki del proyecto
+- **Sitio Web (Demo):** mentema.com
+- **Repositorio:** github.com/tuusuario/mentema
+- **Issues & Discusiones:** Consulta la pestaña "Issues" del repositorio
 
 ---
 
-**Hecho con dedicación para marcas que inspiran**
+**Hecho con dedicación para marcas que inspiran.**
 
-_"Creamos experiencias que conectan"_
-
-<!-- PREVIEWS:START -->
-<!-- PREVIEWS:END -->
+*"Creamos experiencias que conectan."*
